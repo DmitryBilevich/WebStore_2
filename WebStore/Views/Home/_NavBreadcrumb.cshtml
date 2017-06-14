@@ -1,0 +1,9 @@
+﻿<div data-bind="visible: breadcrumbNav.isActive">
+    <ul class="navBreadcrumb breadcrumb">
+        <li><a href="#" data-bind="click: goToMainPage">Home</a></li>
+        <li data-bind="if: breadcrumbNav.section()"><a href="#" data-bind="click: breadcrumbNavSectionClick, text: breadcrumbNav.section().name"></a></li>
+        <li data-bind="if: breadcrumbNav.category(), visible: breadcrumbNav.category()"><a href="#" data-bind="click: breadcrumbNavCategoryClick, text: breadcrumbNav.category().name"></a></li>
+        <li data-bind="if: breadcrumbNav.subCategory(), visible: breadcrumbNav.subCategory()"><a href="#" data-bind="click: breadcrumbNavSubCategoryClick, text: breadcrumbNav.subCategory().name"></a></li>
+        <li data-bind="if: breadcrumbNav.product(), visible: breadcrumbNav.product()"><a href="#" data-bind="text: breadcrumbNav.product().name"></a></li>
+    </ul>
+</div>

@@ -1,0 +1,31 @@
+﻿<div id="mastheadContainer">
+    <div id="masthead">
+        <div class="masthead-logo-container">
+            <button id="mastheadMenuButton"></button>
+            <a id="mastheadLogoLink" href="/">
+                <img id="mastheadLogoIcon" src="/Content/images/logo.png" alt="DMiGLe">
+            </a>
+        </div>
+        <span id="mastheadRegion">BY</span>
+        <div id="mastheadProject">Online Store</div>
+        <div id="mastheadRight">
+            <div id="mastheadUser" data-bind="click: goToLogin"></div>
+            <div id="mastheadCart" data-bind="click: goToCart">
+                <span class="mastheadCart-count" data-bind="visible: cart.productsCount() > 0,  text: cart.productsCount()"></span>
+            </div>
+        </div>
+        <div class="masthead-content">
+            <form id="mastheadSearch">
+                <div id="mastheadSearchCategory">
+                    <select id="mastheadSearchCategorySelect">
+                        <option>All</option>
+                        <option>Guitar</option>
+                    </select>
+                </div>
+                <div id="mastheadSearchIcon"></div>
+                <div id="mastheadSearchInputContainer">
+                    <input id="mastheadSearchInput" placeholder="Search Product"></div>
+            </form>
+        </div>
+    </div>
+</div>

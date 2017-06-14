@@ -1,0 +1,21 @@
+﻿.input-error {
+    color: red;
+    border: 1px solid red;
+}
+
+#label-input-imageFile {
+    float: left;
+}
+
+#imageFile {
+    float: left;
+}
+
+.product-image-delete {
+    display: none;
+}
+
+.picture-is-deleted {
+    display: block;
+    color: red;
+}

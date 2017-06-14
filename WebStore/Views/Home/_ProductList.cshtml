@@ -1,0 +1,25 @@
+﻿<div class="row">
+    <div id="productListFilter" class="col-lg-2 col-md-3">
+        @Html.Partial("_ProductListFilterAccordion")
+    </div>
+    <div id="productList" class="col-lg-10 col-md-9">
+        <ul class="productList-itemsContainer" data-bind="foreach: displayedProductList()">
+            <li class="productList-item col-lg-15 col-md-3 col-sm-4">
+                <div class="xrow">
+                    <div class="xcol-sm-5 xcol-md-12">
+                        <img data-bind="attr:{src: image}"/>
+                    </div>
+                    <div class="xcol-sm-7 xcol-md-12">
+                        <a class="productOpenLink" data-bind="text: name, click: $parent.openProduct"></a>
+                    </div>
+                    <div class="productList-price-container">
+                        <span class="productList-price" data-bind="text: price"></span>
+                    </div>
+                    <div>
+                        <button class="button-addToCart" data-bind="click: $parent.listAddProductToCart">Add to Cart</button>
+                    </div>
+                </div>
+            </li> 
+        </ul>
+    </div>
+</div>

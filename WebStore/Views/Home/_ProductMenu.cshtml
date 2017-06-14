@@ -1,0 +1,55 @@
+﻿<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header" id="productMenuHeader">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#productMenu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a id="navbarBrandOnlineStore" class="navbar-brand" href="/" data-bind="click: goToMainPage"><span>Online Store</span></a>
+            <span id="productMenuActiveItem" data-bind="text: productMenuActive()"></span>
+        </div>
+        <div class="collapse navbar-collapse" id="productMenu">
+            <ul class="nav navbar-nav" data-bind="foreach: productMenuItems">
+                <li data-bind="click: $parent.productMenuItemClick, css: { 'active' :  isActive()}">
+                    <a data-bind="text: name, css:{'productMenu-longText': isLongText}, attr:{href: url}"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="sectionsContainer">
+    <!-- ko foreach: productMenuItems -->
+    <div class="section-container row" data-bind="visible: isActive">
+        <div data-bind="if: $data.categories">
+            <div class="col-sm-3 category-item-container">
+                <!-- ko foreach: $data.categories -->
+                <div class="category-item" data-bind="text: name, css: {active: $data.isActive}, event: {mouseover: $root.productCategoryHover.bind($data, $parent)}, click: $root.categoryClick.bind($data, $parent)"></div>
+                <!-- /ko -->
+            </div>
+            <div class="subCategories-container col-sm-9">
+                <!-- ko foreach: $data.categories -->
+                <div class="subCategory-item-container" data-bind="visible: $data.isActive && isActive">
+                    <div data-bind="if: $data.subCategories">
+                        <!-- ko foreach: $data.subCategories -->
+                        <a data-bind="attr:{href: url}, click: $root.subCategoryClick.bind($data, $parent)">
+                            <div class="subCategory-item col-sm-4">
+                                <img class="subCategory-item-img" data-bind="attr:{src: image}" />
+                                <span data-bind="text: name"></span>
+                            </div>
+                        </a>
+                        <!-- /ko -->
+                    </div>
+                    <div data-bind="if: !$data.subCategories"><h1 class="noProducts-text">No <span data-bind="text: $data.name"></span> yet</h1></div>
+                </div>
+                <!-- /ko -->
+            </div>
+        </div>
+        <div class="col-sm-3 category-item-container" data-bind="if: !$data.categories"><h1 class="noProducts-text">No <span data-bind="text: $data.name"></span> yet</h1></div>
+    </div>
+    <!-- /ko -->
+</div>
+@Html.Partial("_NavBreadcrumb")
+<div data-bind="if: title()">
+    <h1 class="nav-title" data-bind="text: title()"></h1>
+</div>

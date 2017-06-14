@@ -1,0 +1,54 @@
+﻿#loginContainer input {
+    display: block;
+    width: 100%;
+}
+
+#loginContainer h2 {
+    color: #b32017;
+}
+
+#loginContainer p {
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    font-family: arial;
+}
+
+#loginContainer button {
+    font-weight: bold;
+    font-family: arial;
+    font-size: 14px;
+    color: #ffffff;
+    width: 100%;
+}
+
+#createAccount {
+}
+
+#loginContainer form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4d4d4d;
+    cursor: pointer;
+}
+
+#loginContainer form input {
+    margin-bottom: 10px;
+}
+
+#createAccountButtonContainer {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+@media (min-width: 1200px) {
+    #createAccount {
+        border-left: 3px solid #f2efe9;
+    }
+}
+
+@media (max-width: 1200px) {
+    #createAccount {
+        border-top: 3px solid #f2efe9;
+        margin-top: 20px;
+    }
+}

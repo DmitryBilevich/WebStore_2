@@ -1,0 +1,71 @@
+﻿<h1 id="prodTitle" data-bind="text: displayedProduct().name"></h1>
+<div class="rating-stars" data-bind="css:{ 'r5': displayedProduct().rating==5, 'r4': displayedProduct().rating==4,'r3': displayedProduct().rating==3,'r2': displayedProduct().rating==2,'r1': displayedProduct().rating==1}"></div>
+<div class="col-xs-12 col-sm-8 col-md-6">
+    <div id="productCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox" data-bind="foreach: displayedProduct().pictures">
+            <div class="item" data-bind="css: {'active': $index()==1}">
+                <img data-bind="attr:{src: $data}" />
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#productCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#productCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<div class="hidden-xs hidden-sm col-md-6">
+    <div class="product-description-short">
+        <div class="panel panel-default">
+            <div class="panel-heading">Specification. <a class="prod-d-specfLink" data-bind="click: productScrollToSpecification">Lear more</a></div>
+            <div class="panel-body" data-bind="foreach: displayedProduct().shortDescription">
+                <p data-bind="text: $data"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-xs-12 col-sm-4 col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">Purchase</div>
+        <div class="panel-body">
+            <p>
+                Price: 
+                <span class="prod-d-price" data-bind="text: displayedProduct().price"></span>
+                <b>| Fast, FREE Shipping</b>
+            </p>
+            <p>
+                Availability: 
+                <span class="prod-d-availability">In Stock</span>
+                <br/>
+                <span data-bind="visible: shippingOrderTimer">
+                    <b>Want it tomorrow, <b data-bind="text: shippingTomorrow"></b>?</b>
+                    Order within <b data-bind="text: shippingOrderTimer"></b> and choose one-day shipping at checkout
+                </span>
+            </p>
+            <p>
+                Quantity:
+                <select class="prod-d-qty" data-bind="options: quantityOptions, value: productDetailsQty">
+                </select>
+            </p>
+            <button class="button-addToCart" data-bind="click: prodAddProductToCart">Add to Cart</button>
+        </div>
+    </div>
+</div>
+<h2>Specification</h2>
+<div>
+    <table id="productSpecifTable" class="table table-striped">
+        <tbody data-bind="foreach: displayedProduct().Description">
+            <tr>
+                <td class="hidden-xs col-sm-3"></td>
+                <th class="col-xs-3" data-bind="text: name"></th>
+                <td class="col-xs-9 col-sm-6" data-bind="text: text"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

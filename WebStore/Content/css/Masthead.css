@@ -1,0 +1,207 @@
+﻿#mastheadPositioner {
+    background: transparent none repeat scroll 0 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    min-width: 375px;
+}
+
+#mastheadContainer {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 1px solid #e8e8e8;
+    min-width: 0;
+    padding: 7px 30px 8px;
+    position: relative;
+}
+
+.masthead-logo-container {
+    float: left;
+    margin-top: 3px;
+    position: relative;
+    width: 210px;
+}
+
+#mastheadMenuButton {
+    background-color: transparent;
+    background-image: url("/content/images/masthead-menu.png");
+    background-size: cover;
+    border: medium none;
+    float: left;
+    height: 40px;
+    opacity: 0.7;
+    width: 40px;
+}
+
+    #mastheadMenuButton:hover {
+        opacity: 1;
+    }
+
+#mastheadLogoIcon {
+    height: 35px;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+#mastheadRegion {
+    position: absolute;
+}
+
+#mastheadRight {
+    float: right;
+}
+
+#mastheadUser {
+    width: 40px;
+    height: 40px;
+    background-image: url("/content/images/user-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-left: 15px;
+}
+
+#mastheadCart {
+    width: 40px;
+    height: 40px;
+    background-image: url("/content/images/cart-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+#mastheadUser:hover, #mastheadCart:hover {
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+}
+
+.masthead-content {
+    overflow: hidden;
+    padding-left: 30px;
+}
+
+#mastheadSearch {
+    background-color: #f5f5f5;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    max-width: 570px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+#mastheadSearchInput {
+    font-size: 16px;
+    height: 100%;
+    padding-left: 8px;
+    width: 100%;
+}
+
+#mastheadSearchCategory {
+    float: left;
+    height: 100%;
+    display: none;
+}
+
+#mastheadSearchCategorySelect {
+    height: 100%;
+}
+
+#mastheadSearchIcon {
+    float: right;
+    height: 100%;
+    width: 45px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    opacity: 0.6;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px #eee inset;
+    background-image: url("/content/images/search.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#mastheadSearchIcon:hover {
+    opacity: 1;
+}
+
+#mastheadSearchInputContainer {
+    overflow: hidden;
+    height: 100%;
+}
+
+#mastheadProject {
+    position: absolute;
+    top: 55px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+    background-image: url("/content/images/store-icon.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 210px;
+    text-align: center;
+    color: #ff0000;
+    font-family: arial;
+    font-size: 18px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mastheadCart-count {
+    background: #b32017;
+    border-radius: 50%;
+    height: 23px;
+    width: 23px;
+    border: 2px solid #fff;
+    text-align: center;
+    color: #fff;
+    line-height: 20px;
+    font-weight: 600;
+    font-size: .875rem;
+    position: absolute;
+    right: 0;
+}
+
+@media (max-width: 670px) {
+    #mastheadContainer {
+        padding-left: 5px;
+    }
+}
+
+@media (max-width: 570px) {
+    #mastheadRegion {
+        display: none;
+    }
+
+    .masthead-logo-container {
+        width: auto;
+    }
+
+    #mastheadLogoLink {
+        display: block;
+        overflow: hidden;
+        width: 37px;
+    }
+
+    #mastheadLogoIcon {
+        margin-left: 5px;
+    }
+
+    .masthead-content {
+        padding-left: 5px;
+    }
+}

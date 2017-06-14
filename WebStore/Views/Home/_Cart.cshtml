@@ -1,0 +1,68 @@
+﻿<h1 class="cart-title">Shopping Cart</h1>
+<div class="row panel panel-heading">
+    <div class="col-xs-6">
+        Your Products
+    </div>
+    <div class="col-xs-2">
+        Price
+    </div>
+    <div class="col-xs-2">
+        Quantity
+    </div>
+    <div class="col-xs-2">
+        Total
+    </div>
+</div>
+<div data-bind="visible: cart.isEmpty()==false">
+    <!-- ko foreach: cart.products -->
+    <div class="row cart-pr-row">
+        <div class="col-xs-6">
+            <div class="row visible-xs visible-sm">
+                <div class="col-sm-6">
+                    <a><img class="cart-pr-image-large" data-bind="attr:{src: image}" /></a>
+                </div>
+                <div class="col-sm-6">
+                    <a data-bind="text: name"></a>
+                </div>
+            </div>
+            <div class="visible-md visible-lg">
+                <a><img class="cart-pr-image" data-bind="attr:{src: image}" /></a>
+                <a data-bind="text: name"></a>
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <span data-bind="text: price"></span>
+        </div>
+        <div class="col-xs-2">
+            <select class="cart-qty" data-bind="options: $parent.quantityOptions, value: quantity"></select>
+            <div class="cart-removeProduct" data-bind="click: $parent.removeProductFromCart">Remove</div>
+        </div>
+        <div class="col-xs-2">
+            <span data-bind="text: getTotalPrice()"></span>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <div class="row ">
+        <div class="col-sm-6 col-lg-8"></div>
+        <div class="col-sm-6 col-lg-4">
+            <div class="row">
+                <div class="col-xs-6"></div>
+                <div class="col-xs-6 cart-totalPrice">
+                    Order Total: <span data-bind="text: cart.total()"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <button class="cart-btn-continueShopping btn btn-default" data-bind="click: continueShopping">Continue Shopping</button>
+                </div>
+                <div class="col-xs-6">
+                    <button class="cart-btn-checkout btn btn-success" data-bind="click: cartGoToCheckout">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-bind="visible: cart.isEmpty()==true">
+    Your shopping cart is empty
+</div>

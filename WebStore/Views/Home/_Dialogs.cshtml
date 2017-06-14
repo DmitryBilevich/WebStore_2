@@ -1,0 +1,26 @@
+﻿<div id="productAddedDialog" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" data-bind="if: productJustAdded()">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">✓ Just Added to Cart</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img data-bind="attr:{src: productJustAdded().image}" class="productJustAdded-image">
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="productJustAdded-name" data-bind="text: productJustAdded().name"></p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-bind="click: goToCart">View Cart</button>
+                <button class="btn btn-success" data-bind="click: goToCheckout">Go to Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>

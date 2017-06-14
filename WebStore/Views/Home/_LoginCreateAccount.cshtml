@@ -1,0 +1,33 @@
+﻿<div id="createAccount" class="col-lg-6">
+    <h2>Create Account</h2>
+    <p>New to our store? Enter your information below. (Password is case sensitive and should include a minimum of 8 characters and cannot match the email address)</p>
+    <form>
+        <div class="row">
+            <div class="col-md-7">
+                <label>First Name</label>
+                <input class="cr-account-input-fistName" />
+            </div>
+            <div class="col-md-7">
+                <label>Last Name</label>
+                <input class="cr-account-input-lastName" />
+            </div>
+            <div class="col-md-7">
+                <label>Email</label>
+                <input class="cr-account-input-email" /><span class="email-error hidden"> Check your email</span>
+            </div>
+            <div class="col-md-7">
+                <label>Password</label>
+                <input class="cr-account-input-password" /><span class="password-error hidden"> Check your password</span>
+            </div>
+            <div class="col-md-7">
+                <label>Confirm Password</label>
+                <input class="cr-account-input-confirmPassword" /><span class="confirmPassword-error hidden"> Check your Confirm Password</span>
+            </div> 
+        </div>
+        <div id="createAccountButtonContainer" class="row">
+            <div class="col-md-4">
+                <button class="btn btn-success" type="submit" onclick="createAccount()">Create Account</button>
+            </div>
+        </div>
+    </form>
+</div>

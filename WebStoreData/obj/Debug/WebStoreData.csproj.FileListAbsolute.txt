@@ -1,0 +1,10 @@
+E:\WebStore\WebStore2\WebStoreData\bin\Debug\WebStoreData.dll.config
+E:\WebStore\WebStore2\WebStoreData\bin\Debug\WebStoreData.dll
+E:\WebStore\WebStore2\WebStoreData\bin\Debug\WebStoreData.pdb
+E:\WebStore\WebStore2\WebStoreData\bin\Debug\EntityFramework.dll
+E:\WebStore\WebStore2\WebStoreData\bin\Debug\EntityFramework.SqlServer.dll
+E:\WebStore\WebStore2\WebStoreData\bin\Debug\EntityFramework.xml
+E:\WebStore\WebStore2\WebStoreData\bin\Debug\EntityFramework.SqlServer.xml
+E:\WebStore\WebStore2\WebStoreData\obj\Debug\WebStoreData.csprojResolveAssemblyReference.cache
+E:\WebStore\WebStore2\WebStoreData\obj\Debug\WebStoreData.dll
+E:\WebStore\WebStore2\WebStoreData\obj\Debug\WebStoreData.pdb

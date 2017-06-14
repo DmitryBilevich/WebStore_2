@@ -1,0 +1,287 @@
+﻿@using Newtonsoft.Json
+@using WebStore.Admin.Models.Product;
+@model ProductListViewModel
+@{
+    Layout = null;
+    string selectedSection="";
+    string selectedCategory = "";
+    string selectedSubcategory = "";
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link href="@Url.Content("~/Content/css/Product.css")" rel="stylesheet" />
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        @*<script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>*@
+        <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="http://knockoutjs.com/downloads/knockout-3.4.1.js" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/product.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/productListViewModel.js")" type="text/javascript"></script>
+    
+        <title>Product</title>
+    </head>
+    <body>
+        <script> 
+            var categories=@Html.Raw(JsonConvert.SerializeObject(Model.Categories));
+            var subcategories = @Html.Raw(JsonConvert.SerializeObject(Model.Subcategories));
+            var products = @Html.Raw(JsonConvert.SerializeObject(Model.Products));
+        </script>
+        <div id="confirmDialog" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="model-body">
+                        <div>
+                            <span class="confirm-dialog-text"></span>
+                        </div>
+                        <button onclick="customConfirmYes()">Yes</button> <button class="btn btn-default" data-dismiss="modal">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div id="actionProduct" class="modal fade" role="dialog" >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="model-header">
+                        <div>
+                            <span class="action-product-name"></span>
+                        </div>
+                        <div>
+                            <span class="action-product-newName"></span>
+                        </div>
+                    </div>
+                    <div class="model-body">
+                        <button onclick="confirmUpdateProduct()">Save</button>
+                        <button onclick="confirmUndoProductChanges()">Undo</button>
+                        <button>Delete</button>
+                    </div>
+                    <div class="model-footer">
+                        <button class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="shortDescriptionModal" role="dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Short Description</h4>
+                </div>
+                <div class="modal-body"> 
+                    <div data-bind="foreach: productShortDescriptionEditor().productShortDescriptions">
+                        <textarea data-bind="text: $data.name"></textarea> : <textarea data-bind="text: $data.text"></textarea><br/>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="descriptionModal" role="dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Description</h4>
+                </div>
+                <div class="modal-body"> 
+                    <div data-bind="foreach: productDescriptionEditor().productDescriptions">
+                        <textarea data-bind="text: name, event: {change: changeImage}"></textarea>  <textarea data-bind="text: text, event: {change: changeImage}"></textarea><br/>
+                    </div>
+                    <div data-bind="foreach: test">
+                       1
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="myModal" role="dialog">
+            
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="active"><a href="#main" role="tab" data-toggle="tab">Main</a></li>
+                            <li><a href="#details" role="tab" data-toggle="tab">Details</a></li>
+                        </ul>
+                        
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="main">
+                                <div class="product-mainImage-conteiner">
+                                    <img id="product-mainImage-image" data-bind="attr: {src:productImageEditor().Image()}" src="" style="width:200px; height:250px;"/><br> 
+                                    <label id="label-input-imageUrl" for="imageUrl"> Image Url </label>
+                                    <textarea  id='imageUrl' type='text' data-bind="textInput: productImageEditor().Image, css:{'input-error': productImageEditor().productMainImageInvalid()}"></textarea><br>
+                                    <span data-bind="visible: productImageEditor().productMainImageInvalid">Unvalid url image value. Check url image </span><br> 
+                                    <label id="label-input-imageFile" for="imageFile">  Image file </label>
+                                    <input data-bind="event: {change: changeImage}, css:{'input-error': productImageEditor().productMainImageInvalid()}"  id='imageFile' type='file'/>
+                                    <button data-bind="click: undoProductMainImageChange">Undo</button><br>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="details">
+                                <div class="product-image-details-conteiner">
+                                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                                        <div class="carousel-inner" role="listbox"  @*data-bind="foreach: productImageEditor().productPictures()"*@>
+                                                <div class="item active"  @*data-bind="css: {'active': $index()==1}"*@>
+                                                    @*<img data-bind="attr: {src:$data}" alt="picture">*@
+                                                    <img data-bind="attr: {src:productImageEditor().ProductDesplayed()}" alt="picture">
+                                                    <span class="product-image-delete" data-bind="css:{'picture-is-deleted': productImageEditor().productPictureIsDeleted()}">Picture will be deleted</span>
+                                                </div>
+                                        </div>
+                                        <a class="left carousel-control" href="#myCarousel" data-slide="prev" data-bind="click: slideProductImage.bind($data, productImageEditor().ProductDesplayed(), '0' )">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#myCarousel" data-slide="next" data-bind="click: slideProductImage.bind($data, productImageEditor().ProductDesplayed(), '1' )">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>    
+                                    <label for="details-imageUrl"> Image Url </label>
+                                    <textarea  id='details-imageUrl' type='text' data-bind="textInput: productImageEditor().productUpdatedUrlPicture, event: {change: changeUrlPicture}"></textarea><br>
+                                    <label  for="details-change-imageFile"> Change Image select new Image file </label>
+                                    <input id="details-change-imageFile" data-bind="event: {change: changePicture}, css:{'input-error': productImageEditor().productMainImageInvalid()}" type='file'/>
+                                    <button data-bind="click: undoProductPictureChange">Undo</button><br>
+                                    <input id='details-delete-image' data-bind="event: {change: deleteProductPicture.bind($data, productImageEditor().ProductDesplayed())}" type='checkbox'/>
+                                    <label for="details-delete-image"> Delete image</label><br/>
+                                    <label  for="details-imageFile">Add new  Image file </label>
+                                    <input id="details-imageFile" data-bind="event: {change: addPicture}, css:{'input-error': productImageEditor().productMainImageInvalid()}" type='file'/>
+                                    <button data-bind="click: delNewImage.bind($data, productImageEditor().ProductDesplayed())">Del new image</button><br>
+                                    <textarea  id='details-imageUrl' type='text' data-bind="textInput: productImageEditor().ProductNewUrLPicture, event: {change: addProductNewUrlPicture}"></textarea><br>
+                                    @*<button data-bind="click: ">Add</button><br>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-bind="click: saveProductImageChange" > Save</button>   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+      
+            </div>
+        </div>
+        <div class="row">
+            <div class="menu-menu-product col-lg-2">
+                <select><br/>
+                    @foreach (var s in Model.Sections)
+                    {
+                        <option>@s.Name</option>
+                    }
+                </select>
+                <select><br/>
+                    @foreach (var category in Model.Categories)
+                    {
+                        <option>@category.Name</option>
+                    }
+                </select>
+                <select><br/>
+                    @foreach (var subcategory in Model.Subcategories)
+                    {
+                        <option>@subcategory.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="product-menu-table col-lg-10">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Section</th>
+                            <th>Category</th>
+                            <th>Subcategory</th>
+                            <th>ShortDescription</th>
+                            <th>Rating</th>
+                            <th>Description</th>
+                            <th>Picture</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var product in Model.Products)
+                        {
+                            <tr data-productid="@product.ProductId" class="product-row">
+                                <td><button onclick="showActionProductDialog(this)" data-toggle="modal" data-target="#actionProduct">!!!</button></td>
+                                <td><input onchange="changeProductProperty(this)" name="name" value="@product.Name" /></td>
+                                <td><input onchange="changeProductProperty(this)" name="price" value="@product.Price" /></td>
+                                
+                                <td><select id="tableProductSection" onchange="changeProductProperty(this,@product.ProductId); selectSection(this)">
+                                        @foreach (var s in Model.Sections)
+                                        {
+                                            selectedSection = null;
+                                            if (product.SectionId==s.SectionId)
+                                            {
+                                                selectedSection ="selected";
+                                            }
+                                            <option  @selectedSection value="@s.SectionId">@s.Name</option>
+                                    
+                                        }
+                                    </select></td>
+                            
+                                <td><select  onchange="changeProductProperty(this, @product.ProductId, 'category'); selectCategory(this)" class="product-category-select">
+                                        @foreach (var category in Model.Categories)
+                                        {
+                                            selectedCategory = null;
+                                            if (product.CategoryId==category.CategoryId)
+                                            {
+                                                selectedCategory = "selected";
+                                            }
+                                            <option @selectedCategory value="@category.CategoryId">@category.Name</option>
+                                    
+                                        }
+                                    </select></td>
+                                
+                                <td><select onchange="changeProductProperty(this, @product.ProductId, 'subcategory')" class="product-subcategory-select">
+                                        @foreach (var subcategory in Model.Subcategories)
+                                        {
+                                            selectedSubcategory = null;
+                                            if (product.SubcategoryId==subcategory.SubcategoryId)
+                                            {
+                                                selectedSubcategory = "selected";
+                                            }
+                                            <option @selectedSubcategory value="@subcategory.SubcategoryId">@subcategory.Name</option>
+                                    
+                                        }
+                                    </select></td>
+                                
+                                
+                                <td>@*<input type="text"value="ShortDescription" />*@
+                                    <button type="button" data-bind="click: openProductShortDescriptionEditor.bind($data, '@product.ProductId') " class="btn btn-info btn-lg" data-toggle="modal" data-target="#shortDescriptionModal">ShortDescription</button>
+                                </td>
+                                <td><input onchange="changeProductProperty(this, @product.ProductId, 'rating')" name="rating" type="text"value="@product.Rating" /></td>
+                                <td><button type="button" data-bind="click: openProductDescriptionEditor.bind($data, '@product.ProductId') " class="btn btn-info btn-lg" data-toggle="modal" data-target="#descriptionModal">Description</button></td>
+                                <td>
+                                    
+                                    @*<button type="button" onclick="openProductImageEditor(@product.ProductId)" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Picture</button>*@
+                                    <button type="button" data-bind="click: openProductImageEditor.bind($data, '@product.ProductId') " class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Picture</button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <button onclick="saveChangeProducts()">Save Change</button>
+                
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        $(function() {
+            ko.applyBindings(new ProductListViewModel());
+        });
+</script>
+</html>

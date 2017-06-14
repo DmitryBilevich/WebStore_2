@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Online Store";
+}
+
+<div id="productMenuContainer" class="container container-full">
+    @Html.Partial("_ProductMenu")
+</div>
+<div id="bannerContainer" class="container" data-bind="visible: showBanner">
+    @Html.Partial("_Banner")
+</div>
+<div id="loginContainer" class="container content-page" data-bind="visible: showLogin">
+    @Html.Partial("_Login")
+</div>
+<div id="productListContainer" class="container content-page container-full" data-bind="visible: showProductList">
+    @Html.Partial("_ProductList")
+</div>
+<div id="productDetailsContainer" class="container content-page container-full" data-bind="if: displayedProduct(), visible: showProduct">
+    @Html.Partial("_ProductDetails")
+</div>
+<div id="cartContainer" class="container content-page container-full" data-bind="if: cart, visible: showCart">
+    @Html.Partial("_Cart")
+</div>
+<div id="checkoutContainer" class="container content-page container-full" data-bind="if: !cart.isEmpty(), visible: showCheckout">
+    @Html.Partial("_Checkout")
+</div>
+<div>
+    @Html.Partial("_Dialogs")
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        ko.applyBindings(new HomeViewModel());
+        $("#loading").addClass("hide");
+        $("#mainContainer").removeClass("hide");
+    });
+</script>
+

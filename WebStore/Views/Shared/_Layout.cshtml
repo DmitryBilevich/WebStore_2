@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link href="@Url.Content("~/Content/css/Layout.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/css/Masthead.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/css/Index.css")" rel="stylesheet"/>
+    <link href="@Url.Content("~/Content/css/ProductList.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/css/ProductMenu.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/css/Login.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/css/ProductDetails.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/css/Cart.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/css/Checkout.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/css/CreateAccount.css")" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://knockoutjs.com/downloads/knockout-3.4.1.js" type="text/javascript"></script>
+
+
+    <script src="@Url.Content("~/Scripts/Data/dataBase.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Data/laptopsTabletsSection.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Data/phonesSection.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/homeViewModel.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Data/user.js")" type="text/javascript"></script>
+
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("/content/images/store-icon.png")" rel="shortcut icon" />
+</head>
+<body>
+    <div id="mastheadPositioner">
+        @Html.Partial("_Masthead")
+    </div>
+    <h1 id="loading">Page is loading. Please stand by.</h1>
+    <div id="mainContainer" class="hide">
+        @RenderBody()
+    </div>
+</body>
+</html>

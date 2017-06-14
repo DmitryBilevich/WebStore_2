@@ -1,0 +1,5 @@
+E:\WebStore\WebStore2\WebStore.Model\obj\Debug\WebStore.Model.csprojResolveAssemblyReference.cache
+E:\WebStore\WebStore2\WebStore.Model\bin\Debug\WebStore.Model.dll
+E:\WebStore\WebStore2\WebStore.Model\bin\Debug\WebStore.Model.pdb
+E:\WebStore\WebStore2\WebStore.Model\obj\Debug\WebStore.Model.dll
+E:\WebStore\WebStore2\WebStore.Model\obj\Debug\WebStore.Model.pdb

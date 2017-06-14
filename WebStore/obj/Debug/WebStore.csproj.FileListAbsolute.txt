@@ -1,0 +1,152 @@
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\WebStore.dll
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\WebStore.pdb
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\Microsoft.Web.Infrastructure.dll
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\Newtonsoft.Json.dll
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Net.Http.Formatting.dll
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Web.Helpers.dll
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Web.Http.dll
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Web.Http.WebHost.dll
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Web.Mvc.dll
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Web.Razor.dll
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Web.WebPages.Deployment.dll
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Web.WebPages.dll
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Web.WebPages.Razor.dll
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\Newtonsoft.Json.xml
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Net.Http.Formatting.xml
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Web.Helpers.xml
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Web.Http.xml
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Web.Http.WebHost.xml
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Web.Mvc.xml
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Web.Razor.xml
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Web.WebPages.xml
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Web.WebPages.Deployment.xml
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\bin\System.Web.WebPages.Razor.xml
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\obj\Debug\WebStore.csprojResolveAssemblyReference.cache
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\obj\Debug\WebStore.dll
+E:\Work\Projects\Study projects\WebStore\WebStore\WebStore\obj\Debug\WebStore.pdb
+D:\WebStore\WebStore\WebStore\bin\WebStore.dll.config
+D:\WebStore\WebStore\WebStore\bin\WebStore.dll
+D:\WebStore\WebStore\WebStore\bin\WebStore.pdb
+D:\WebStore\WebStore\WebStore\bin\Microsoft.Web.Infrastructure.dll
+D:\WebStore\WebStore\WebStore\bin\Newtonsoft.Json.dll
+D:\WebStore\WebStore\WebStore\bin\System.Web.Helpers.dll
+D:\WebStore\WebStore\WebStore\bin\System.Web.Mvc.dll
+D:\WebStore\WebStore\WebStore\bin\System.Web.Razor.dll
+D:\WebStore\WebStore\WebStore\bin\System.Web.WebPages.Deployment.dll
+D:\WebStore\WebStore\WebStore\bin\System.Web.WebPages.dll
+D:\WebStore\WebStore\WebStore\bin\System.Web.WebPages.Razor.dll
+D:\WebStore\WebStore\WebStore\bin\Newtonsoft.Json.xml
+D:\WebStore\WebStore\WebStore\bin\System.Web.Helpers.xml
+D:\WebStore\WebStore\WebStore\bin\System.Web.Mvc.xml
+D:\WebStore\WebStore\WebStore\bin\System.Web.Razor.xml
+D:\WebStore\WebStore\WebStore\bin\System.Web.WebPages.xml
+D:\WebStore\WebStore\WebStore\bin\System.Web.WebPages.Deployment.xml
+D:\WebStore\WebStore\WebStore\bin\System.Web.WebPages.Razor.xml
+D:\WebStore\WebStore\WebStore\obj\Debug\WebStore.csprojResolveAssemblyReference.cache
+D:\WebStore\WebStore\WebStore\obj\Debug\WebStore.dll
+D:\WebStore\WebStore\WebStore\obj\Debug\WebStore.pdb
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\WebStore.dll
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\WebStore.pdb
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\Microsoft.Web.Infrastructure.dll
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\Newtonsoft.Json.dll
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Net.Http.Formatting.dll
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Web.Helpers.dll
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Web.Http.dll
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Web.Http.WebHost.dll
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Web.Mvc.dll
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Web.Razor.dll
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Web.WebPages.Deployment.dll
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Web.WebPages.dll
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Web.WebPages.Razor.dll
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\Newtonsoft.Json.xml
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Net.Http.Formatting.xml
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Web.Helpers.xml
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Web.Http.xml
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Web.Http.WebHost.xml
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Web.Mvc.xml
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Web.Razor.xml
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Web.WebPages.xml
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Web.WebPages.Deployment.xml
+E:\Work\Projects\Study projects\WebStore2\WebStore\bin\System.Web.WebPages.Razor.xml
+E:\Work\Projects\Study projects\WebStore2\WebStore\obj\Debug\WebStore.csprojResolveAssemblyReference.cache
+E:\Work\Projects\Study projects\WebStore2\WebStore\obj\Debug\WebStore.dll
+E:\Work\Projects\Study projects\WebStore2\WebStore\obj\Debug\WebStore.pdb
+E:\Новая папка\WebStore2\WebStore\bin\WebStore.dll.config
+E:\Новая папка\WebStore2\WebStore\bin\WebStore.dll
+E:\Новая папка\WebStore2\WebStore\bin\WebStore.pdb
+E:\Новая папка\WebStore2\WebStore\bin\Microsoft.Web.Infrastructure.dll
+E:\Новая папка\WebStore2\WebStore\bin\Newtonsoft.Json.dll
+E:\Новая папка\WebStore2\WebStore\bin\System.Web.Helpers.dll
+E:\Новая папка\WebStore2\WebStore\bin\System.Web.Mvc.dll
+E:\Новая папка\WebStore2\WebStore\bin\System.Web.Razor.dll
+E:\Новая папка\WebStore2\WebStore\bin\System.Web.WebPages.Deployment.dll
+E:\Новая папка\WebStore2\WebStore\bin\System.Web.WebPages.dll
+E:\Новая папка\WebStore2\WebStore\bin\System.Web.WebPages.Razor.dll
+E:\Новая папка\WebStore2\WebStore\bin\Newtonsoft.Json.xml
+E:\Новая папка\WebStore2\WebStore\bin\System.Web.Helpers.xml
+E:\Новая папка\WebStore2\WebStore\bin\System.Web.Mvc.xml
+E:\Новая папка\WebStore2\WebStore\bin\System.Web.Razor.xml
+E:\Новая папка\WebStore2\WebStore\bin\System.Web.WebPages.xml
+E:\Новая папка\WebStore2\WebStore\bin\System.Web.WebPages.Deployment.xml
+E:\Новая папка\WebStore2\WebStore\bin\System.Web.WebPages.Razor.xml
+E:\Новая папка\WebStore2\WebStore\obj\Debug\WebStore.csprojResolveAssemblyReference.cache
+E:\Новая папка\WebStore2\WebStore\obj\Debug\WebStore.dll
+E:\Новая папка\WebStore2\WebStore\obj\Debug\WebStore.pdb
+G:\Новая папка\WebStore2\WebStore\bin\WebStore.dll
+G:\Новая папка\WebStore2\WebStore\bin\WebStore.pdb
+G:\Новая папка\WebStore2\WebStore\bin\Microsoft.Web.Infrastructure.dll
+G:\Новая папка\WebStore2\WebStore\bin\Newtonsoft.Json.dll
+G:\Новая папка\WebStore2\WebStore\bin\System.Net.Http.Formatting.dll
+G:\Новая папка\WebStore2\WebStore\bin\System.Web.Helpers.dll
+G:\Новая папка\WebStore2\WebStore\bin\System.Web.Http.dll
+G:\Новая папка\WebStore2\WebStore\bin\System.Web.Http.WebHost.dll
+G:\Новая папка\WebStore2\WebStore\bin\System.Web.Mvc.dll
+G:\Новая папка\WebStore2\WebStore\bin\System.Web.Razor.dll
+G:\Новая папка\WebStore2\WebStore\bin\System.Web.WebPages.Deployment.dll
+G:\Новая папка\WebStore2\WebStore\bin\System.Web.WebPages.dll
+G:\Новая папка\WebStore2\WebStore\bin\System.Web.WebPages.Razor.dll
+G:\Новая папка\WebStore2\WebStore\bin\Newtonsoft.Json.xml
+G:\Новая папка\WebStore2\WebStore\bin\System.Net.Http.Formatting.xml
+G:\Новая папка\WebStore2\WebStore\bin\System.Web.Helpers.xml
+G:\Новая папка\WebStore2\WebStore\bin\System.Web.Http.xml
+G:\Новая папка\WebStore2\WebStore\bin\System.Web.Http.WebHost.xml
+G:\Новая папка\WebStore2\WebStore\bin\System.Web.Mvc.xml
+G:\Новая папка\WebStore2\WebStore\bin\System.Web.Razor.xml
+G:\Новая папка\WebStore2\WebStore\bin\System.Web.WebPages.xml
+G:\Новая папка\WebStore2\WebStore\bin\System.Web.WebPages.Deployment.xml
+G:\Новая папка\WebStore2\WebStore\bin\System.Web.WebPages.Razor.xml
+G:\Новая папка\WebStore2\WebStore\obj\Debug\WebStore.csprojResolveAssemblyReference.cache
+G:\Новая папка\WebStore2\WebStore\obj\Debug\WebStore.dll
+G:\Новая папка\WebStore2\WebStore\obj\Debug\WebStore.pdb
+E:\WebStore\WebStore2\WebStore\bin\WebStore.dll
+E:\WebStore\WebStore2\WebStore\bin\WebStore.pdb
+E:\WebStore\WebStore2\WebStore\bin\Microsoft.Web.Infrastructure.dll
+E:\WebStore\WebStore2\WebStore\bin\Newtonsoft.Json.dll
+E:\WebStore\WebStore2\WebStore\bin\System.Net.Http.Formatting.dll
+E:\WebStore\WebStore2\WebStore\bin\System.Web.Helpers.dll
+E:\WebStore\WebStore2\WebStore\bin\System.Web.Http.dll
+E:\WebStore\WebStore2\WebStore\bin\System.Web.Http.WebHost.dll
+E:\WebStore\WebStore2\WebStore\bin\System.Web.Mvc.dll
+E:\WebStore\WebStore2\WebStore\bin\System.Web.Razor.dll
+E:\WebStore\WebStore2\WebStore\bin\System.Web.WebPages.Deployment.dll
+E:\WebStore\WebStore2\WebStore\bin\System.Web.WebPages.dll
+E:\WebStore\WebStore2\WebStore\bin\System.Web.WebPages.Razor.dll
+E:\WebStore\WebStore2\WebStore\bin\Newtonsoft.Json.xml
+E:\WebStore\WebStore2\WebStore\bin\System.Net.Http.Formatting.xml
+E:\WebStore\WebStore2\WebStore\bin\System.Web.Helpers.xml
+E:\WebStore\WebStore2\WebStore\bin\System.Web.Http.xml
+E:\WebStore\WebStore2\WebStore\bin\System.Web.Http.WebHost.xml
+E:\WebStore\WebStore2\WebStore\bin\System.Web.Mvc.xml
+E:\WebStore\WebStore2\WebStore\bin\System.Web.Razor.xml
+E:\WebStore\WebStore2\WebStore\bin\System.Web.WebPages.xml
+E:\WebStore\WebStore2\WebStore\bin\System.Web.WebPages.Deployment.xml
+E:\WebStore\WebStore2\WebStore\bin\System.Web.WebPages.Razor.xml
+E:\WebStore\WebStore2\WebStore\obj\Debug\WebStore.csprojResolveAssemblyReference.cache
+E:\WebStore\WebStore2\WebStore\obj\Debug\WebStore.dll
+E:\WebStore\WebStore2\WebStore\obj\Debug\WebStore.pdb
+E:\WebStore\WebStore2\WebStore\bin\WebStoreData.dll
+E:\WebStore\WebStore2\WebStore\bin\EntityFramework.dll
+E:\WebStore\WebStore2\WebStore\bin\WebStoreData.pdb
+E:\WebStore\WebStore2\WebStore\bin\EntityFramework.xml
+E:\WebStore\WebStore2\WebStore\bin\EntityFramework.SqlServer.dll
+E:\WebStore\WebStore2\WebStore\bin\EntityFramework.SqlServer.xml

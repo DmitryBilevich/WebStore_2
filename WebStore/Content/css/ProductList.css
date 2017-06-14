@@ -1,0 +1,113 @@
+﻿
+
+#productListFilter {
+
+}
+
+#productList {
+    border-left: 3px solid #f2efe9;
+}
+
+.productList-item {
+    list-style-type: none;
+    border-bottom: 3px solid #f2efe9;
+    border-left: 3px solid #f2efe9;
+    position: relative;
+    right: 3px;
+}
+
+.productList-itemsContainer {
+    padding: 0;
+    overflow: hidden;
+}
+
+.productList-item img {
+    width: 90%;
+    height: auto;
+}
+
+.button-addToCart {
+    display: block;
+    clear: both;
+    margin: 0;
+    margin-bottom: .5rem !important;
+    width: 100%;
+    font-weight: bold;
+    text-decoration: none !important;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    border-style: solid;
+    border-width: 0;
+    background-color: #49ad7f;
+    border-color: #3a8a66;
+    color: #fff;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    height: 33px;
+    font-size: 14px;
+}
+
+.productOpenLink {
+    color: #331d0f;
+}
+
+.productOpenLink:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #b32017;
+}
+
+.text-narrowby {
+    font-weight: bold;
+    color: #1a1a1a;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+#accordion button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding-left: 25px;
+        background-image: url("/content/images/minus.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    position: relative;
+    right: 15px;
+}
+
+#accordion button.collapsed {
+    background-image: url("/content/images/plus.png");
+    opacity: 0.7;
+}
+
+#accordion button.collapsed:hover {
+   opacity: 1;
+}
+
+.productList-price {
+    color: #b32017;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.productList-price-container {
+    border-top: 1px solid #f6f4ef;
+    border-bottom: 1px solid #f6f4ef;
+    text-align: center;
+    height: 35px;
+    margin-bottom: 5px;
+    line-height: 32px;
+}
+
+.productJustAdded-image {
+    width: 250px;
+    height: 250px;
+}
+
+.productJustAdded-name {
+    font-size: 16px;
+}

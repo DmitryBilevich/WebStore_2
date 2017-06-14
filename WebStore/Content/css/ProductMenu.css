@@ -1,0 +1,141 @@
+﻿#productMenuContainer {
+    margin-top: 56px;
+}
+
+.carousel-inner {
+    max-height: 650px;
+}
+
+.carousel-inner img {
+    width: 100%;
+}
+
+#navbarBrandOnlineStore {
+    background-image: url("/content/images/store-icon.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 50px;
+    border-right: 1px solid #e7e7e7;
+}
+
+#navbarBrandOnlineStore span {
+    padding-left: 40px;
+}
+
+#productMenu li {
+    height: 50px;
+    cursor: pointer;
+}
+
+#productMenu a {
+    text-align: center;
+    display: block;
+    height: 100%;
+}
+
+#productMenuActiveItem {
+    display: none;
+}
+
+#productMenuHeader {
+    text-align: center;
+    line-height: 47px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #1a1a1a;
+}
+
+#sectionsContainer {
+    position: relative;
+    top: -20px;
+    border: 1px solid #e7e7e7;
+}
+
+.category-item {
+    opacity: 0.55;
+    font-size: 14px;
+    line-height: 1.334;
+    padding: 8px 20px;
+    cursor: pointer;
+    /*background-image: url("/Content/images/arrow-right3.png");
+    background-repeat: no-repeat;
+    background-position: right center;*/
+}
+
+.category-item.active, .category-item:hover {
+    opacity: 1;
+    background-color: rgba(51, 51, 51, 0.05);
+}
+
+.category-item-container {
+    padding-right: 0;
+    cursor: pointer;
+}
+
+.subCategory-item {
+    height: 100px;
+    border-right: 1px solid #f6f6f6;
+    border-bottom: 1px solid #f6f6f6;
+    padding: 0;
+    cursor: pointer;
+}
+
+.subCategory-item:hover {
+    background-color: rgba(51,51,51,0.05);
+}
+
+.subCategories-container {
+    padding-left: 0;
+    border-left: 1px solid #f6f6f6;
+}
+
+.subCategory-item-img {
+    width: 100px;
+    height: 99px;
+}
+
+.section-container {
+    min-height: 400px;
+}
+
+.navBreadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    bottom: 10px;
+}
+
+.nav-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+
+.noProducts-text {
+    color: #4D4D4D;
+    font-size: 20px;
+}
+
+@media (max-width: 995px) and (min-width: 768px) {
+    #productMenu a.productMenu-longText {
+        padding: 5px;
+    }
+
+    #productMenu a {
+        width: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    #productMenuActiveItem {
+        display: inline;
+    }
+}
+
+@media (max-width: 430px) {
+    #productMenuHeader  {
+         line-height: inherit;
+    }
+}
